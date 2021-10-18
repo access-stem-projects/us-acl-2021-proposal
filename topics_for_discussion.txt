@@ -1,0 +1,59 @@
+
+Topic 1.  Are we concerned with end-to-end accessibility?
+(Topic started by David F)
+
+By end-to-end accessibility I mean that the author indicates the
+meaning as they write the original source, and that meaning
+is preserved throughout the pipeline to the point where the
+final product is consumed (presumably on a Web page) by a reader.
+If the reader is using Assistive Technology (AT) to listen to
+the page, then expressions like
+
+|g|
+
+will be pronounced correctly.  Note that possible pronunciations
+include
+
+absolute value of g
+order of g
+determinant of g
+cardinality of g
+length of g
+
+
+End-to-end accessibility is not the norm now.  Often authors write
+the string " |g| "  in the document source.  Volker (and others)
+have developed heuristics to help determine the meaning -- and then
+use the meaning to give the correct pronunciation.  Given the abysmal
+state of LaTeX source, which is well-known to all who spend time
+looking at LaTeX from a variety of authors, it is natural to be
+skeptical that authors can be persuaded to write better source.
+
+
+But let's assume we want to pursue end-to-end accessibility.  That
+would require an input method which allows authors to indicate
+the meaning.  Here are some possibilities.
+
+1. Semantic LaTeX macros.
+
+The author would type \abs{x}, or \order{x} or \det{x} or something
+else to indicate the meaning.  All of those typeset as  |x| , but
+the source has extra information which conveys the meaning.
+
+LaTeXML is an example:  https://dlmf.nist.gov/LaTeXML/
+
+2. Semantic editing programs.
+
+An interface like the Equation Editor in Word could be enhanced to
+prompt the author to disambiguate an expression.
+
+I have heard of people working on this, but don't know of any examples.
+
+3.  Space Math (disclaimer:  this is my idea -DF) (second disclaimer:
+what exists at the link below is all there is; there is no implementation.)
+
+https://aimath.org/~farmer/spacemath/
+
+4.  What are other possibilities?
+
+
